@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/arrow-long-left.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/arrow-long-right.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="contact-h1">kontakt</h1>
+        <div class="back-arrow arrow"><a class="arrow-icon" href="services.html"><i class="gg-arrow-long-left"></i></a>
+        </div>
+        <div class="next-arrow arrow"><a class="arrow-icon" href="opinion.html"><i class="gg-arrow-long-right"></i></a>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
+            <input type="hidden" name="access_key" value="bc116bca-031e-4003-ac2f-70cccffd00e9">
+            <label for="name">Imię:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="message">Wiadomość:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Wyślij</button>
+
+        </form>
+    </div>
+    <footer>&copy; Filip Adamski</footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,374 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 62.5%;
+	font-family: 'Roboto', sans-serif;
+	scroll-behavior: smooth;
+	background-color: black;
+}
+.wrapper {
+	margin: 0 auto;
+	padding: 0 auto;
+	max-width: 1200px;
+}
+
+.header {
+	display: flex;
+	width: 100%;
+	height: 80vh;
+	background-image: url(/img/NIGHT.png);
+	background-position: center;
+	background-size: contain;
+	.main-h1, .service-h1, .contact-h1, .opinion-h1 {
+		position: fixed;
+		padding: 3%;
+		font-size: 2.5rem;
+		color: black;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	.service-h1, .contact-h1, .opinion-h1 {
+		margin-left: 50%;
+		transform: translateX(-50%);
+		color: black;
+	}
+	.arrow {
+		position: fixed;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 2.5%;
+		margin-left: 5%;
+		width: 50px;
+		height: 50px;
+		border: 1px solid black;
+		border-radius: 50%;
+		cursor: pointer;
+		a {
+			color: black;
+			padding: 60%;
+		}
+	}
+	.next-arrow {
+		margin-left: 95%;
+		transform: translateX(-100%);
+		color: black;
+		border: 1px solid black;
+	}
+}
+
+.cards {
+	display: flex;
+	justify-content: space-evenly;
+	background-color: black;
+	color: white;
+	.card {
+		margin: 3%;
+		width: 200px;
+		height: 200px;
+		background-color: rgb(83, 109, 189);
+		border-radius: 5%;
+		cursor: pointer;
+		transition: 0.3s;
+		a {
+			display: flex;
+			width: 100%;
+			height: 100%;
+			justify-content: center;
+			align-items: center;
+			font-size: 2rem;
+			font-weight: bold;
+			text-transform: uppercase;
+			text-decoration: none;
+			color: white;
+		}
+	}
+	.service {
+		font-size: 2rem;
+	}
+	.card:hover {
+		animation: scale 0.3s;
+		animation-fill-mode: forwards;
+		background-color: rgb(207, 102, 60);
+	}
+}
+
+// SERVICES
+
+.cards-service {
+	display: flex;
+	flex-direction: column;
+	.card-box{
+		display: flex;
+		margin: 2em;
+		width: 100%;
+		height: 200px;
+		background-color: rgb(194, 189, 189);
+		border-radius: 8px;
+		.card-service {
+			display: flex;
+			align-items: center;
+			text-align: center;
+			width: 200px;
+			height: 200px;
+			background-color: rgb(207, 102, 60);
+			color: white;
+			font-size: 1.5rem;
+			font-weight: bold;
+			border-radius: 8px;
+			overflow: hidden;
+		}
+		.info {
+			display: flex;
+			align-items: center;
+			text-align: center;
+			margin: 10px;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			color: black;
+			font-size: 1.1rem;
+			line-height: 1.4;
+			font-weight: bold;
+		}
+	}
+}
+
+// CONTACT
+
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-size: 1.4rem;
+
+	input {
+		width: 400px;
+		height: 40px;
+		margin: 5px;
+		padding: 10px;
+		background-color: rgb(168, 161, 161);
+		color: black;
+		font-size: 1rem;
+		font-weight: bold;
+		border: 2px solid rgb(80, 76, 76);
+		border-radius: 9px;
+		font-family: sans-serif;
+	}
+	input:focus {
+		border: 2px solid rgb(207, 102, 60);
+	}
+	
+	textarea {
+		width: 400px;
+		max-width: 400px;
+		max-height: 1000px;
+		margin: 10px;
+		padding: 10px;
+		background-color: rgb(168, 161, 161);
+		border: 2px solid rgb(207, 102, 60);
+		border-radius: 8px;
+		font-family: sans-serif;
+		font-weight: 500;
+	}
+
+	button {
+		padding: 10px 40px 10px 40px;
+		margin:10px 0 20px 0;
+		font-size: 1.4rem;
+		background-color: rgb(207, 102, 60);
+		border: 2px solid rgb(207, 102, 60);
+		border-radius: 10px;
+		cursor: pointer;
+		transition: all .4s;
+		text-transform: uppercase;
+		color: white;
+	}
+	button:hover {
+		background-color: rgb(212, 81, 25);
+		border: 2px solid rgb(212, 81, 25);
+	}
+}
+
+// Opinie
+.opinion {
+	margin: 6.6em;
+	text-align: center;
+	.info {
+		color: white;
+		font-size: 2rem;
+	}
+}
+
+footer {
+	font-size: 1rem;
+	text-align: center;
+	background-color: rgb(53, 50, 50);
+	color: white;
+}
+
+@keyframes scale {
+	0% {
+		scale: 1;
+	}
+	100% {
+		scale: 1.2;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.header {
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.header {
+		background-image: url(/img/NIGHTsmall.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		h1, .service-h1, .contact-h1, .opinion-h1 {
+			display: flex;
+			text-align: center;
+			margin-left: 50%;
+			transform: translateX(-50%);
+			font-size: 2.5rem;
+		}
+	}
+	.cards {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.card {
+		width: 80%;
+		margin: 10px 0;
+	}
+
+	// SERVICE
+	.cards-service {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.card-box{
+			display: flex;
+			margin: 2em;
+			width: 90%;
+			height: 400px;
+			background-color: rgb(194, 189, 189);
+			border-radius: 8px;
+			.card-service {
+				display: flex;
+				align-items: center;
+				text-align: center;
+				width: 200px;
+				height: 400px;
+				background-color: rgb(207, 102, 60);
+				color: white;
+				font-size: 1.5rem;
+				font-weight: bold;
+				border-radius: 8px;
+				overflow: hidden;
+			}
+			.info {
+				display: flex;
+				align-items: center;
+				text-align: center;
+				margin: 10px;
+				height: 100%;
+				width: 100%;
+				top: 0;
+				left: 0;
+				color: black;
+				font-size: 1.1rem;
+				line-height: 1.4;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.header {
+		h1 {
+			padding: 0.6em;
+			font-size: 2rem;
+		}
+	}
+	.cards {
+		.card {
+			width: 200px;
+			height: 200px;
+			a {
+				font-size: 2rem;
+			}
+		}
+	}
+
+	.cards-service {
+		display: flex;
+		flex-direction: column;
+		margin: 2rem;
+		.card-box{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+			height: 400px;
+			background-color: rgb(194, 189, 189);
+			border-radius: 8px;
+			.card-service {
+				display: flex;
+				justify-content: center;
+				width: 100%;
+				height: 100px;
+				background-color: rgb(207, 102, 60);
+				color: white;
+				font-size: 1.5rem;
+				text-transform: uppercase;
+				font-weight: bold;
+				border-radius: 8px;
+				overflow: hidden;
+			}
+			.info {
+				display: flex;
+				align-items: center;
+				text-align: center;
+				padding: 5%;
+				height: 100%;
+				width: 100%;
+				top: 0;
+				left: 0;
+				color: black;
+				font-size: 1rem;
+				line-height: 1.2;
+			}
+		}
+	}
+
+	.contact-form {
+	
+		input {
+			width: 300px;
+		}
+		
+		textarea {
+			width: 300px;
+			max-width: 300px;
+			font-weight: 700;
+		}
+	
+		button {
+			font-size: 1.2rem;
+		}
+	}
+}
